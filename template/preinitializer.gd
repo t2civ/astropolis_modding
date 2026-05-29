@@ -1,0 +1,96 @@
+# preinitializer.gd
+# This file is part of I, Voyager
+# https://ivoyager.dev
+# *****************************************************************************
+# Copyright 2019-2026 Charlie Whitfield
+# I, Voyager is a registered trademark of Charlie Whitfield in the US
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# *****************************************************************************
+extends RefCounted
+
+## Project preinitializer instantiated via [code]res://ivoyager_override.cfg[/code].
+##
+## Used to modify base [IVCoreSettings], [IVCoreInitializer], and instantiated
+## program objects before the scene tree is built. (As an alternative, all
+## [IVCoreSettings] and [IVCoreInitializer] changes could be done in
+## [code]res://ivoyager_override.cfg[/code].)
+
+const PROJECT_NAME := "Project Template (Replace Me!)"
+
+const USE_THREADS := true # false can help threaded code debugging
+
+#const VERBOSE_GLOBAL_SIGNALS := false
+#const VERBOSE_STATEMANAGER_SIGNALS := false
+
+func _init() -> void:
+	
+	var version: String = ProjectSettings.get_setting("application/config/version")
+	print("%s v%s" % [PROJECT_NAME, version])
+	
+	# debug
+	#if OS.is_debug_build and VERBOSE_GLOBAL_SIGNALS:
+		#IVDebug.signal_verbosely_all(IVGlobal, "Global") # print all IVGlobal signal emits
+	
+	print("Use threads = ", USE_THREADS)
+	IVStateManager.core_init_program_objects_instantiated.connect(
+			_on_core_init_program_objects_instantiated)
+	
+	# change global init values
+	IVCoreSettings.use_threads = USE_THREADS
+	IVCoreSettings.wait_for_start = true
+	IVCoreSettings.start_time_date_clock = [2026, 1, 1, 12, 0, 0]
+	
+	IVSettingsManager.set_default("pbd_splash_caption_open", false)
+	IVSettingsManager.set_default(&"save_base_name", "Template")
+	
+	# Save plugin
+	IVSave.file_extension = "MyProjectSave"
+	IVSave.file_description = "My Project Save"
+	IVSave.autosave_uses_suffix_generator = true
+	IVSave.quicksave_uses_suffix_generator = true
+	IVSave.configure_save_plugin()
+	
+
+
+func _on_core_init_program_objects_instantiated() -> void:
+	# Here you can access and change init values for program Nodes and
+	# program RefCounteds before they are used (for Nodes, before they are
+	# added to the tree).
+	
+	# debug
+	#if OS.is_debug_build and VERBOSE_STATEMANAGER_SIGNALS:
+		#IVDebug.signal_verbosely_all(IVStateManager, "StateManager") # print all StateManager signal emits
+		
+	var speed_manager: IVSpeedManager = IVGlobal.program[&"SpeedManager"]
+	speed_manager.start_speed = 1
+	speed_manager.speeds = [
+		IVUnits.SECOND,
+		IVUnits.SECOND * 10,
+		IVUnits.SECOND * 100,
+		IVUnits.SECOND * 1e3,
+		IVUnits.SECOND * 1e4,
+		IVUnits.SECOND * 1e5,
+		IVUnits.SECOND * 1e6,
+		IVUnits.SECOND * 1e7,
+	]
+	speed_manager.speed_names = [
+		&"1x",
+		&"10x",
+		&"100x",
+		&"1000x",
+		&"10,000x",
+		&"100,000x",
+		&"1,000,000x",
+		&"10,000,000x",
+	]

@@ -1,0 +1,244 @@
+# Changelog
+
+This file documents changes to the Project Template "shell" project only. For changes to the core simulator code, see [ivoyager_core/CHANGELOG.md](https://github.com/ivoyager/ivoyager_core/blob/master/CHANGELOG.md).
+
+File format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+
+See cloning and downloading instructions [here](https://www.ivoyager.dev/developers/).
+
+
+## [v0.1.2] - UNRELEASED
+
+Under development using Godot 4.6.2.
+
+### Added
+* Plugin ivoyager_assistant v0.0.1.dev. Under development to allow AI tests and (eventually) AI assistance for accessibility (e.g., voice navigation).
+
+### Changed
+* Removed IVFragmentIdentifier from scene tree. (New system in Core.)
+* Updated plugin ivoyager_core to v0.1.2.dev
+* Updated plugin ivoyager_tables to v0.1.2.dev
+* Updated plugin ivoyager_units to v0.1.2.dev
+* Updated plugin ivoyager_save to v0.1.2.dev
+* Completed doc comments in all files.
+
+
+## [v0.1.1] - 2026-02-09
+
+Released using Godot 4.6.
+
+### Changed
+* Added template game speeds in preinitializer.gd.
+* Removed unneeded/unmaintained website text in README.md.
+* Updated plugin ivoyager_core to v0.1.1.
+* Updated plugin ivoyager_tables to v0.1.1.
+* Updated plugin ivoyager_units to v0.1.1.
+* Updated plugin ivoyager_save to v0.1.1.
+
+## [v0.1] - 2025-12-13
+
+Beta release!
+
+Released using Godot 4.5.1.
+
+### Changed
+* Updated GUI for new Core plugin widgets.
+* Updated code for plugin API changes.
+* Added/updated 3RD_PARTY.md, CREDITS.md, AUTHORS.md (copied from ivoyager_core plugin)
+* Updated plugin ivoyager_core to v0.1.
+* Updated plugin ivoyager_tables to v0.1.
+* Updated plugin ivoyager_units to v0.1.
+* Updated plugin ivoyager_save to v0.1.
+
+## [v0.0.25] - 2025-06-12
+
+Released using Godot 4.4.1.
+
+### Changed
+* Updated plugin ivoyager_core to v0.0.25.
+* Updated plugin ivoyager_tables to v0.0.4.
+* Updated plugin ivoyager_units to v0.0.4.
+* Updated plugin ivoyager_save to v0.0.3.
+
+## [v0.0.24] - 2025-03-31
+
+Released using Godot 4.4.
+
+### Added
+* IVUnits replacement singleton (from Planetarium) with scale change to support shadows.
+
+### Changed
+* Various Rendering settings to support shadows.
+* Updated plugin ivoyager_core to v0.0.24. (Has shadows!)
+* Updated plugin ivoyager_tables to v0.0.3.
+* Updated plugin ivoyager_units to v0.0.3.
+
+## [v0.0.23] - 2025-03-20
+
+Released using Godot 4.4.
+
+### Changed
+
+* Typed all dictionaries.
+* Many code updates for plugin changes.
+* Updated plugin ivoyager_core to v0.0.23.
+* Updated plugin ivoyager_tables to v0.0.2.
+* Updated plugin ivoyager_units to v0.0.2.
+* Updated plugin ivoyager_save to v0.0.2.
+
+## [v0.0.22] - 2025-03-07
+
+Released using Godot 4.3. **We will update to 4.4 in the next release!**
+
+### Changed
+* Updated plugin ivoyager_core to v0.0.22.
+* Replace plugin ivoyager_tree_saver with the new [ivoyager_save](https://github.com/ivoyager/ivoyager_save).
+
+## [v0.0.21] - 2025-01-07
+
+Released using Godot 4.3.
+
+### Changed
+* Updated plugin 'ivoyager_core' to v0.0.21.
+* Replaced depreciated plugin 'ivoyager_table_importer' with two plugins from split: 'ivoyager_tables' and 'ivoyager_units' (both v0.0.1).
+
+## [v0.0.20] - 2024-12-20
+
+Released using Godot 4.3.
+
+### Changed
+* Updated plugin 'ivoyager_core' to v0.0.20.
+* Updated plugin 'ivoyager_table_importer' to v0.0.9.
+
+## [v0.0.19] - 2024-12-16
+
+Released using Godot 4.3.
+
+### Changed
+* Updated plugin 'ivoyager_core' to v0.0.19.
+* Updated plugin 'ivoyager_table_importer' to v0.0.8.
+* Updated plugin 'ivoyager_tree_saver' to v0.0.2.
+
+## [v0.0.18] - 2024-03-15
+
+Released using Godot 4.2.1. _Has backward breaking changes!_
+
+**NEW!** ivoyager_core editor plugin will download and add (or replace) assets for you. Just press 'Download' if prompted.
+
+### Added
+* Plugin 'ivoyager_tree_saver' v0.0.1 (functionality moved out of ivoyager_core)
+
+### Changed
+* Gets project version from project.godot.
+* Updated plugin 'ivoyager_core' to v0.0.18.
+* Updated plugin 'ivoyager_table_importer' to v0.0.7.
+
+## [v0.0.17] - 2023-10-03
+
+Released using Godot 4.1.1.
+
+Requires non-Git-tracked **ivoyager_assets-0.0.17**. Download from ivoyager_core [releases](https://github.com/ivoyager/ivoyager_core/releases) and add as res://addons/ivoyager_assets.
+
+### Changed
+* Replaced submodule [ivoyager](https://github.com/ivoyager/ivoyager) with addons/[ivoyager_core](https://github.com/ivoyager/ivoyager_core), which now operates as an editor plugin.
+* All code now expects ivoyager_assets to be in the 'addons' directory.
+
+
+## [v0.0.16] - 2023-09-25
+
+**We've migrated to Godot 4!**
+
+Released using Godot 4.1.1.
+
+Requires non-Git-tracked **ivoyager_assets-0.0.16**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
+
+### Added
+* Table Reader [ivoyager_table_reader](https://github.com/ivoyager/ivoyager_table_importer) added as editor plugin. (Functionality was previously in core 'ivoyager'.)
+
+### Changed
+* Many migration changes. See core ivoyager [migration changes](https://github.com/ivoyager/ivoyager/blob/master/CHANGELOG.md).
+
+## [v0.0.15] - 2023-07-24
+
+Released using Godot 3.5.2. **This is the final release using Godot 3.x!**
+
+Requires non-Git-tracked **ivoyager_assets-0.0.14**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
+
+### Changed
+* Updated submodule 'ivoyager' to v0.0.15.
+
+## [v0.0.14] - 2023-03-15
+
+Released using Godot 3.5.2.
+
+Requires non-Git-tracked **ivoyager_assets-0.0.14**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
+
+### Changed
+* Updated 'example' GUI to interact with new systems and assets in core ivoyager.
+* Updated submodule 'ivoyager' to v0.0.14.
+
+## [v0.0.13] - 2022-09-28
+
+Released using Godot 3.5.1.
+
+Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
+
+### Changed
+* Updated submodule 'ivoyager' to v0.0.13.
+
+## [v0.0.12] - 2022-01-20
+
+Released using Godot 3.4.2.stable.
+
+Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
+
+### Changed
+* Updated submodule 'ivoyager' to v0.0.12.
+
+## [v0.0.11] - 2022-01-19
+
+Released using Godot 3.4.2.stable.
+
+Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
+
+### Added
+* Hotkey cntr-G toggles show/hide all project GUI (default hotkey).
+
+### Changed
+* Added project-level si_base_unit.gd static class and removed universe.tscn & universe.gd to support 'ivoyager' submodule changes.
+* gui_example directory was moved from 'ivoyager' submodule to this project's replace_me directory.
+* Reorganization and renaming of files and gui classes.
+* Updated submodule 'ivoyager' to v0.0.11.
+
+## [v0.0.10] - 2022-01-09
+
+Released using Godot 3.4.2.stable.
+
+Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
+
+### Added
+* A project level CHANGELOG.md!
+
+### Changed
+* Updated submodule 'ivoyager' to v0.0.10.
+
+
+[v0.1.2]: https://github.com/ivoyager/project_template/compare/v0.1.1...HEAD
+[v0.1.1]: https://github.com/ivoyager/project_template/compare/v0.1...v0.1.1
+[v0.1]: https://github.com/ivoyager/project_template/compare/v0.0.25...v0.1
+[v0.0.25]: https://github.com/ivoyager/project_template/compare/v0.0.24...v0.0.25
+[v0.0.24]: https://github.com/ivoyager/project_template/compare/v0.0.23...v0.0.24
+[v0.0.23]: https://github.com/ivoyager/project_template/compare/v0.0.22...v0.0.23
+[v0.0.22]: https://github.com/ivoyager/project_template/compare/v0.0.21...v0.0.22
+[v0.0.21]: https://github.com/ivoyager/project_template/compare/v0.0.20...v0.0.21
+[v0.0.20]: https://github.com/ivoyager/project_template/compare/v0.0.19...v0.0.20
+[v0.0.19]: https://github.com/ivoyager/project_template/compare/v0.0.18...v0.0.19
+[v0.0.18]: https://github.com/ivoyager/project_template/compare/v0.0.17...v0.0.18
+[v0.0.17]: https://github.com/ivoyager/project_template/compare/v0.0.16...v0.0.17
+[v0.0.16]: https://github.com/ivoyager/project_template/compare/v0.0.15...v0.0.16
+[v0.0.15]: https://github.com/ivoyager/project_template/compare/v0.0.14...v0.0.15
+[v0.0.14]: https://github.com/ivoyager/project_template/compare/v0.0.13...v0.0.14
+[v0.0.13]: https://github.com/ivoyager/project_template/compare/v0.0.12...v0.0.13
+[v0.0.12]: https://github.com/ivoyager/project_template/compare/v0.0.11...v0.0.12
+[v0.0.11]: https://github.com/ivoyager/project_template/compare/v0.0.10...v0.0.11
+[v0.0.10]: https://github.com/ivoyager/project_template/compare/v0.0.9-alpha...v0.0.10
