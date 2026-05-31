@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Astropolis Modding"
 config/version="0.0.10.dev"
-run/main_scene="uid://cm645o51ea8k"
+run/main_scene="uid://y7dhw1cn7iu"
 config/features=PackedStringArray("4.6")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
@@ -26,7 +26,7 @@ icon="res://jupiter-icon-128.png"
 
 [autoload]
 
-IVUnits="*uid://tqr4ic01o502"
+IVUnits="*uid://v6mo5lufq6qb"
 IVQConvert="*uid://c8hrxn2mc6635"
 IVQFormat="*uid://b6qll4nfpigux"
 IVTableData="*uid://kimqfyyqxcfo"
@@ -38,6 +38,8 @@ IVCoreInitializer="*uid://chh7oxyc16wm0"
 IVSettingsManager="*uid://b8tkwtacbefl6"
 IVStateManager="*uid://dfigrpveqtlg2"
 IVAssistantServer="*uid://cf38hsxudekl"
+ThreadsafeGlobal="*uid://bp7ff1a7mxpeg"
+MainThreadGlobal="*uid://chrgypyaklpov"
 
 [debug]
 
