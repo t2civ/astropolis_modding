@@ -14,20 +14,19 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="I, Voyager - Project Template"
-config/version="0.1.2.dev"
-run/main_scene="uid://bj163rx3xqq7x"
+config/name="Astropolis Modding"
+config/version="0.0.10.dev"
+run/main_scene="uid://cm645o51ea8k"
 config/features=PackedStringArray("4.6")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
-config/icon="res://template/jupiter-icon-128.png"
 main_scene="res://addons/ivoyager_core/tree_nodes/universe.tscn"
 name="I, Voyager - Project Template"
 icon="res://jupiter-icon-128.png"
 
 [autoload]
 
-IVUnits="*uid://ceqj2b3v48ds0"
+IVUnits="*uid://tqr4ic01o502"
 IVQConvert="*uid://c8hrxn2mc6635"
 IVQFormat="*uid://b6qll4nfpigux"
 IVTableData="*uid://kimqfyyqxcfo"
